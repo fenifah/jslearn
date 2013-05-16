@@ -1,0 +1,79 @@
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="strength.js"></script>
+<h1> JavaScript Validations </h1>
+
+test window.event<a href="keydown.html"> <input type="button" value="check evt.keyCode"></a>
+<br><br>
+<span id="stat"></span>
+<form name="myForm" id="myForm" action="">
+<table>
+ 
+  <tr>
+    <td> username:</td>
+    <td><input name="username" type="text">req</td>
+  </tr>   
+  <tr>
+    <td> password</td>
+    <td><input name="pwd" type="password" onkeyup="CheckPasswordStrength(this.value);">req, pwd strength</td>
+	<td><div id='pwd_strength'></div></td>
+
+  </tr>   
+  <tr>
+    <td> email:</td>
+    <td><input name="email"  type="text">req, validate email address</td> 
+  </tr>   
+  <tr>
+    <td> telephone number:</td>
+    <td><input name="phone"  type="text" > req, validate must number and length >=9</td>
+  </tr>   
+  <tr>
+    <td>
+      Where are you :</td>
+    <td><input name="city"  type="text">req</td> 
+  </tr>   
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="button" onclick="return validate()" value="Submit form">onclick</td> 
+    <td>&nbsp;</td>
+  </tr> 
+
+</table>
+</form> 
+
+
+
+<ul id="myList"><li>Coffee</li><li>Tea</li></ul>
+<b>
+<p id="demo">Click the button to append an item to the list</p>
+</b>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction()
+{
+var node=document.createElement("LI");
+var textnode=document.createTextNode("Water");
+node.appendChild(textnode);
+document.getElementById("myList").appendChild(node);
+}
+</script>
+
+<p><strong>Note:</strong><br>First create an LI node,<br> then create a Text node,<br> then append the Text node to the LI node.<br>Finally append the LI node to the list.</p>
+<!--
+<script>
+function displayResult()
+{
+document.getElementById("myTextarea").select();
+}
+</script>
+</head>
+<body>
+
+<textarea id="myTextarea" cols="20">
+At W3Schools you will find all the Web-building tutorials you need, from basic HTML to advanced XML, SQL, ASP, and PHP.
+</textarea>
+<br>
+
+<button type="button" onclick="displayResult()">Select contents of text area</button>
+
+-->

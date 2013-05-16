@@ -1,0 +1,19 @@
+<html>
+    <body onKeyDown="doKey(event)" onKeyUp="doKey2(event)">
+
+    <script>
+    function doKey(e) {
+        evt = e || window.event; // compliant with ie6        
+		var key = evt.keyCode || evt.which;
+		 key = String.fromCharCode( key );
+        document.getElementById('keydown').innerHTML = '<br><font color=green>tombol ditekan, ini keycodenya => '+evt.keyCode+'<br> <br>dan ini setelah dapetin stringnya</font> => '+key;
+    }
+
+    function doKey2(e) {
+        document.getElementById('keydown').innerHTML='<font color=red>ga ada tombol yg ditekan</font>';
+    }
+    </script>
+Coba tekan tombol apa gitu d keyboard
+    <div id="keydown"></div>
+    </body>
+</html>
